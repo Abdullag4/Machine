@@ -43,7 +43,7 @@ def predict_tab():
 
         # Check if model file exists
         try:
-            checkpoint = torch.load(MODEL_PATH)
+            checkpoint = torch.load(MODEL_PATH, weights_only=False)
 
             classes = checkpoint['classes']
             num_classes = len(classes)
